@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "new_test": 6000,
+  "grid_candidates": 36,
+  "comparison_rows": 16,
+  "stability_pairs": 48,
+  "context_count": 5,
+  "no_previous_ids_artists_or_audio": true,
+  "protocol_sha256": "c4cbfd0f4a61a0e1745a2e2a10100df30bb7387e601c7fed4c6f56263023f837"
+}

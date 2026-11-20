@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "checks": [
+    "dataset m\u00ednimo",
+    "IDs sin fuga",
+    "10 variables sin popularidad",
+    "12 filas comparativas",
+    "m\u00e9tricas finitas",
+    "varianza >= 90%",
+    "48 comparaciones de estabilidad",
+    "figuras generadas"
+  ]
+}

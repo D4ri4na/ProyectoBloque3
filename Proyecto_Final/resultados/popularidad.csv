@@ -1,0 +1,17 @@
+model,space,split,cluster,n,median,q25,q75
+KMeans,original,test,0,1493,34.0,21.0,47.0
+KMeans,original,test,1,507,39.0,22.0,52.0
+KMeans,original,train,0,5967,34.0,20.0,48.0
+KMeans,original,train,1,2033,29.0,17.0,46.0
+GMM,original,test,0,731,30.0,19.0,49.0
+GMM,original,test,1,1269,37.0,23.0,49.0
+GMM,original,train,0,2755,26.0,16.0,45.0
+GMM,original,train,1,5245,36.0,22.0,49.0
+KMeans,pca,test,0,1497,34.0,21.0,47.0
+KMeans,pca,test,1,503,39.0,22.0,52.0
+KMeans,pca,train,0,5990,34.0,20.0,48.0
+KMeans,pca,train,1,2010,29.0,17.0,46.0
+GMM,pca,test,0,567,28.0,19.0,43.0
+GMM,pca,test,1,1433,37.0,23.0,51.0
+GMM,pca,train,0,2197,27.0,17.0,43.0
+GMM,pca,train,1,5803,35.0,20.0,50.0

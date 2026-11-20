@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "comparison_rows": 16,
+  "stability_pairs": 48,
+  "questions": 12,
+  "shared_artists_fit_validation": 0,
+  "shared_artists_previous_holdout": 0,
+  "holdout_ids_not_previously_used": true,
+  "protocol_sha256": "f43997afb6993b24141f731df8b7a181443940c366670aae842d8aa5436730e4",
+  "elapsed_seconds": 301.0223017999997
+}

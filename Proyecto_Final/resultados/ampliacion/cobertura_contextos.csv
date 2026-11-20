@@ -1,0 +1,7 @@
+context,training_songs,eligible
+electronica,1188,True
+rock_metal,1177,True
+pop,401,True
+hiphop_rnb,262,False
+latina,530,True
+acustica_folk_country,594,True

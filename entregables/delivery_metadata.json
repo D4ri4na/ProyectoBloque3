@@ -1,0 +1,21 @@
+{
+  "operation": "create_library_file",
+  "status": "succeeded",
+  "path": "/bloque3-ml/Proyecto_Musica_Bloque3.zip",
+  "file_id": "file_00000000a9e0820ebfb93535d99db35f",
+  "library_file_id": "libfile_d9b33953a3c88191b33e78f1e3023c5e",
+  "file_name": "Proyecto_Musica_Bloque3.zip",
+  "current_version_number": 0,
+  "restored_from_version_number": null,
+  "xattrs": [
+    {
+      "name": "user.library-file-version",
+      "value": "0"
+    }
+  ],
+  "directory_id": "6af8332b7cd08191a5be63ab17c73d85",
+  "mime_type": "application/zip",
+  "library_artifact_type": "other",
+  "file_size_bytes": 15785298,
+  "external_connectors_accessed": false
+}

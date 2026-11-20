@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "motor_cases": 32,
+  "professional_cases": 28,
+  "checks": [
+    "cuatro configuraciones",
+    "sin autorrecomendación",
+    "candidatos train",
+    "exclusión de artistas",
+    "distancias ordenadas",
+    "filtro de popularidad",
+    "estado sin resultados",
+    "modo global independiente del modelo",
+    "búsqueda y selección",
+    "concordancia Python-JavaScript en 16 consultas/configuraciones"
+  ],
+  "limitation": "Pruebas del motor y eventos con DOM mínimo; no equivalen a inspección visual en navegador."
+}

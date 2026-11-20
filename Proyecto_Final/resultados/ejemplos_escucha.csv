@@ -1,0 +1,54 @@
+query_index,reference_index,distance,high_song,high_artist,high_id,high_popularity,low_song,low_artist,low_id,low_popularity,configuration
+1413,5796,0.4284374697776156,Drunk (And I Don't Wanna Go Home),Elle King;Miranda Lambert,0QULNNd9z5s35entfiiXoa,75,Kumm loss mer danze,Höhner,6aZMMPBl5FuOamKDBPzfNL,26,KMeans_pca
+505,2400,0.45817395142962086,Cinderella,Cyril Kamer,5R7l05dglCrUX0qjZ1Eec1,77,Cu-Step (Cupid Shuffle Pt. 2),Cupid,3dQz2NgEuYwOwtwtYRuflG,12,KMeans_pca
+958,514,0.5314183346789166,Bumpy Ride,Mohombi,71R6zJsrF3ffc3TBFHfivX,72,Déjate Querer,Lalo Ebratt;Sebastian Yatra;Yera;Trapical Minds,0PF7SVd93G602xdi8SVyEz,1,KMeans_pca
+156,427,0.543582725630723,Face Down,The Red Jumpsuit Apparatus,4wzjNqjKAKDU82e8uMhzmr,76,Auf die Liebe,Die Apokalyptischen Reiter,4O7VS8Um5xxQ8PNv7ZJKHs,19,KMeans_pca
+1066,6818,0.5552321962631533,no tears left to cry,Ariana Grande,2qT1uLXPVPzGgFOx4jtEuo,78,Sunlight - Radio Edit,The Magician;Years & Years;Mark Ralph;Stephen Fasano,5fofwtXWrYVCFhoE1GXHiM,0,KMeans_pca
+1895,651,0.6180214200186366,Whiskey Glasses,Morgan Wallen,6foY66mWZN0pSRjZ408c00,81,Wisemen,James Blunt,0A3EiO7m1ZDEO9jSnKZ4r4,1,KMeans_pca
+1967,380,0.6414778616252719,Chasing Cars,Snow Patrol,5hnyJvgoWiQUYZttV4wXy6,80,サードマン,Sayaka Yamamoto,7eau3g0DSyHcrA7t673eCE,22,KMeans_pca
+1906,4898,0.6421434584116836,Wild World,Yusuf / Cat Stevens,7mjSHL2Eb0kAwiKbvNNyD9,77,Rise,Gabrielle,4DAxxBU8fQ4uDE2Zc3yz6c,30,KMeans_pca
+214,891,0.6422832852486852,Messages from the Stars,The Rah Band,6lYY2HktYKpV1pUamfRlU1,74,Cagón,Asspera,5CSz3xWqAp9z5k1cavdVBY,28,KMeans_pca
+1273,1610,0.6479218192537289,Pumped Up Kicks,Madism;MKJ;Felix Samuel,3Dzso9Q2WwupEclqgxBZht,74,My Heart Goes (La Di Da),Becky Hill;Topic,5IBBlGZ3dwIMIEGCKTAGdu,0,KMeans_pca
+950,7246,0.6656062020275697,Hooked On A Feeling,Blue Swede;Björn Skifs,6Ac4NVYYl2U73QiTt11ZKd,73,Blue Moon Baby,The Cramps,5KyfdoN22ubUJ8Hz32rZA4,23,KMeans_pca
+1780,5011,0.666789409676106,Little Do You Know,Alex & Sierra,1almCHdsfikRPfVB9VrEdT,77,Victoria’s Secret - Piano Stripped,Jax,42E2tXsKizkyh8cCUL19R5,22,KMeans_pca
+1065,444,0.6792162740222973,"Quevedo: Bzrp Music Sessions, Vol. 52",Bizarrap;Quevedo,2tTmW7RDtMQtBk7m2rYeSw,99,God Rest Ye Merry Gentlemen (Hallelujah),Rend Collective;We The Kingdom,6E7Ix5jkd6uzfoxuvcI8Ww,0,KMeans_pca
+1733,4751,0.690504128793555,Brave,Sara Bareilles,6Uy6K3KdmUdAfelUp0SeXn,70,Misery Business,Paramore,7MVrLce4MZMiGrm6ehdGSt,0,KMeans_pca
+986,5961,0.7079211649095511,Return of the Mack,Mark Morrison,3jDdpx9PMlfMBS5tOBHFm9,75,Me Quema,Paulina Rubio,7aDxn74ryymIwHHEiXrn0t,0,KMeans_pca
+1760,2676,0.7099287690830167,Replay,Iyaz,4E5P1XyAFtrjpiIxkydly4,76,Beautiful,Bazzi,2QhzxlVT9M0zUl9Q2jsc8O,1,KMeans_pca
+1245,6860,0.7180281177767848,What's Luv? (feat. Ja-Rule & Ashanti),Fat Joe;Ja Rule;Ashanti,2mKouqwAIdQnMP43zxR89r,74,Por Ejemplo,Víctor Manuelle,2O9cl3DHDDayu19zq38dw9,28,KMeans_pca
+204,616,0.7242512936819614,34+35,Ariana Grande,6Im9k8u9iIzKMrmV7BWtlF,81,Dance Again,Selena Gomez,7uWHmvFjivPp1w4wQYf2B7,0,KMeans_pca
+1199,7138,0.7252000479321364,Sakhiyaan,Maninder Buttar,3sqRODOZ1Z6hR4F2tnFAlg,73,Problemón,Alvaro Diaz;Rauw Alejandro,4JvmGac2Ew2OTMe1QJlNzS,0,KMeans_pca
+109,7311,0.7724768583965242,Me Gusta,DTF,6P3FBaZfUjeWYExU2ShaPZ,72,Maddest Life,Rygin King,7n6FiTKMPLDZNjvmhVuxSu,25,KMeans_pca
+1999,735,0.7731445458901007,Dandelions,Ruth B.,2eAvDnpXP5W0cVtiI0PUxV,90,Easy - Single Edit,Rascal Flatts;Natasha Bedingfield,4yZyftmjG4vOK7KkOgOJsU,1,KMeans_pca
+1108,2613,0.7741001634040309,Kids,MGMT,1jJci4qxiYcOHhQR247rEU,78,Eat What You Kill,Unleash The Archers,4e3nB8NXaIZyjImZvwQdh8,24,KMeans_pca
+749,40,0.7777347668004831,= (Equal Sign),j-hope,70XnKsO3UnIT4FnEwChQXx,73,Profile,Alkaline;Black Shadow,5WsLhiPFZYgnd3EmgEVR31,20,KMeans_pca
+1946,2709,0.7822167351089946,the perfect pair,beabadoobee,41P6Tnd8KIHqON0QIydx6a,77,830,Claudia Koh,3YC4FwGXLyjcn9zHGp1n3s,19,KMeans_pca
+62,2327,0.7917878535906525,Meet Me At Our Spot,THE ANXIETY;WILLOW;Tyler Cole,07MDkzWARZaLEdKxo6yArG,81,I Want It That Way,Mini Pop Kids,6XjrZomaw5tYKje9NPoM8T,14,KMeans_pca
+1206,3293,0.7929164628402919,Ishqam,Mika Singh;Ali Quli Mirza,7FcQRdlqMvAKmQH1SXCk1s,70,En Cero,Yandel;Sebastian Yatra;Manuel Turizo,5dq2dQHbAq3BCbBX1OXcV7,0,KMeans_pca
+1337,3611,0.7985266174092805,Hold On,Chord Overstreet,5vjLSffimiIP26QG5WcN2K,82,The Christmas Song (Chestnuts Roasting On An Open Fire),Justin Bieber;Usher,4ov51gsBbA32vSn4l49sOB,0,KMeans_pca
+1301,663,0.7985828888191002,Forever Young,Alphaville,4S1VYqwfkLit9mKVY3MXoo,72,Honey,Austin Plaine,7AtnW6HeSUsPpA9D59PJyx,28,KMeans_pca
+306,39,0.8077384539829394,Girl Crush,Little Big Town,11qh54D0PKkBwelpDxxiEU,70,Ennavale adi ennavale,Kavya Ajit,7aax6thUoYo0sFwysiQtaZ,18,KMeans_pca
+1789,4448,0.8146130699749186,It's You,Sezairi,7rdnB5DAyPbaj51TCQRcqW,73,Dígale,David Bisbal,6MVVLMg67DcdaoHKmAV3ME,0,KMeans_pca
+301,4381,0.9052179692499819,Sports,Beach Bunny,77G0k1La0c5Dw8bAFANcyp,73,American Girls And French Kisses,Beach Slang,0k4Fk3Fe2AZzYJ2c51mJMc,23,KMeans_pca
+577,1935,0.9184844445166224,Separate Ways (Worlds Apart) - Bryce Miller/Alloy Tracks Remix,Journey;Steve Perry,0muK9BAzu2TJXQgWPsEj6e,72,愛難留,Ekin Cheng,1GVX4elPVNrkceVFMLM1dB,24,KMeans_pca
+1278,4547,0.9300724577382785,Mother,Danzig,7txxAtOMwLLnQTpKeBL6bp,76,Same Drug,Cold,4kFn1jFwrE2K1G77zuDQjd,24,KMeans_pca
+685,6041,0.9450546517232234,Novacane,Frank Ocean,4osgfFTICMkcGbbigdsa53,81,CÓMO SE SIENTE - Remix,Jhayco;Bad Bunny,5Mktfl3xR4CNPO0u5QZRal,0,KMeans_pca
+1776,6304,0.9566779706630812,Personal,HRVY,33KJ2xFYONOlIYDBg6wPx8,70,True Love,Yemi Alade,5CUGpOsAYbD6ENpCcsNCt8,0,KMeans_pca
+1392,6554,1.0004608923390386,Tujh Mein Rab Dikhta Hai,Roop Kumar Rathod,2LcXJP95e4HKydTZ2mYfrx,71,Superhéroe,Brock Ansiolitiko,5tgtssaJ6n00puElgGS9YF,30,KMeans_pca
+980,864,1.002251657231467,(I Can't Help) Falling In Love With You,UB40,7ojJ4XvqBhBcteM0zjMebT,70,Hors-la-loi,Indochine,1fVZxmQ9PqxcbMqTUFIVHx,22,KMeans_pca
+1242,4020,1.011058941104722,October Passed Me By,girl in red,0AjcdGri5vhJsmZnduCEqd,74,Hope For The Future,Bastille,3fDxFyhBeQpfSVzRGBo6lN,0,KMeans_pca
+1734,5002,1.0265978863554588,ALL GIRLS ARE THE SAME,RØNIN,4xhWfr0tyA7BGL7eXo8KnV,73,It's Beginning To Look A Lot Like Christmas,Jill Johnson,64B1CCKu87scinusGsUpWC,0,KMeans_pca
+381,4921,1.042278622311207,Put Your Records On,Ritt Momney,6AGOKlMZWLCaEJGnaROtF9,77,Hey Pretty Girl,Kip Moore,2yqTEHKrGZQ4TjdrW83E8p,0,KMeans_pca
+743,1684,1.20721588911928,Only Love Can Hurt Like This - Slowed Down Version,Paloma Faith,48CKzGWOC65n8a8kdANJV8,77,tear gas,Architects,7Igb2aGtzSlisOgXbjmdZW,0,KMeans_pca
+1876,6634,1.2327736935702487,Monster,LUM!X;Gabry Ponte,0YU17F0BlVXvmx5ytsR43w,72,Money Changer,Mavado,4Dj3XZK1W8PdCp1SkNka0B,19,KMeans_pca
+358,6386,1.2632201364769957,Animals,Maroon 5,3h4T9Bg8OVSUYa6danHeH5,70,Camino al Sepulcro,V8,26qopSV1KsnVIl2FwjAcJS,19,KMeans_pca
+1023,6957,1.282804243607623,feel something,Bea Miller,7JDWhC422Gtk1Bq0mL3OTC,71,記得我,黃仲崑,5NANgzJI7jatDJUaYxlVCn,22,KMeans_pca
+704,2609,1.3050904430363577,Africa,TOTO,2374M0fQpWi3dLnB54qaLX,83,Red Rocking Chair,The Steel Wheels,5DkNku3KxqXMqMtlzaxhDM,25,KMeans_pca
+1486,7951,1.3291072568494913,Feel Like God,gazzzy;framed,0Ck25uqrWpIM3yGPP5lxFW,71,Or Nah - Remix,Ty Dolla $ign;The Weeknd;Wiz Khalifa;DJ Mustard,4iLLyEZv9m2koIAjLDA04i,2,KMeans_pca
+531,1973,1.3344741684179933,Intro,The xx,2usrT8QIbIk9y0NEtQwS4j,73,Moon Boots,Jobii,3cvkAg9tRRVEnCE7r7ZXiF,10,KMeans_pca
+956,1935,1.4018019689118517,i wanna be your girlfriend,girl in red,5PjdC2gMATetx5xdnwGUu7,70,愛難留,Ekin Cheng,1GVX4elPVNrkceVFMLM1dB,24,KMeans_pca
+635,2780,1.4321339465451117,Pass The Dutchie,Musical Youth,1BkY0N8ChFk2mdLbAUu8ZK,78,Tu voyeur,Jorge Drexler,5bPliWzRQhKfmcyPZcUJc6,22,KMeans_pca
+1118,6406,1.6067515562670163,deja vu,Olivia Rodrigo,6HU7h9RYOaPRFeh0R3UeAr,87,再生する細胞,Keyakizaka46,17vZp31BEiRQkzSeZleXMq,27,KMeans_pca
+1347,7451,1.6558489120752709,The Night We Met,Lord Huron,3hRV0jL3vUpRrcy398teAU,83,Caruso,Mario Frangoulis,0fzmXtw6U2FZjZlseViHdN,19,KMeans_pca
+662,7544,1.7815189686463444,Судно (Борис Рижий),Molchat Doma,1SHB1hp6267UK9bJQUxYvO,75,Shampoo,Plastilina Mosh,3H4VxEjsbVroJdqIYkWE3z,28,KMeans_pca
+53,3238,2.235048524676107,Bubble Gum,Clairo,3zksbXteOCeSusJ5Xltr3t,80,Только раз бывает в жизни встречи,Oleg Pogudin,5YhazlK0bpn3WSPIUmpaKL,0,KMeans_pca

@@ -1,0 +1,18 @@
+{
+  "primary": "KMeans_original",
+  "verdict": "El perfil fino candidato presenta mayor concentración en esta evaluación adicional, con un intervalo de diferencia completamente positivo.",
+  "profile_rate": 0.04636290967226219,
+  "global_rate": 0.029833333333333333,
+  "lift": 1.5540640113607438,
+  "difference_pp": 2.8352618077064933,
+  "difference_ci_pp": [
+    1.8624232216233212,
+    3.83324941079131
+  ],
+  "baseline_lift": 1.1491565389991891,
+  "supported_contexts": [
+    "electronica"
+  ],
+  "context_claims_multiplicity_adjusted": true,
+  "n_new_evaluation": 6000
+}

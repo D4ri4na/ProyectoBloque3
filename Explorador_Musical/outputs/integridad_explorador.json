@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "queries": 200,
+  "catalog": 10000,
+  "features": 10,
+  "train_size": 8000,
+  "test_size": 2000,
+  "preprocessing_fit": "train_only",
+  "models": [
+    {
+      "configuration": "KMeans_original",
+      "ari_reproduced": 1.0,
+      "fit_seconds": 0.1703299999999217
+    },
+    {
+      "configuration": "KMeans_pca",
+      "ari_reproduced": 1.0,
+      "fit_seconds": 0.10532570000032138
+    },
+    {
+      "configuration": "GMM_original",
+      "ari_reproduced": 1.0,
+      "fit_seconds": 2.0614564000006794
+    },
+    {
+      "configuration": "GMM_pca",
+      "ari_reproduced": 1.0,
+      "fit_seconds": 1.2394584000003306
+    }
+  ],
+  "checks": [
+    "IDs \u00fanicos",
+    "cuatro modelos reproducidos ARI=1",
+    "sin autorrecomendaciones",
+    "sin artistas compartidos en recomendaciones evaluadas",
+    "consultas test y candidatos train",
+    "popularidad excluida de caracter\u00edsticas"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "version": "2026-11-19",
+  "objective": "Perfiles sonoros interpretables y estables, no predecir exito",
+  "features": [
+    "danceability",
+    "energy",
+    "loudness",
+    "speechiness",
+    "acousticness",
+    "instrumentalness",
+    "liveness",
+    "valence",
+    "tempo",
+    "duration_ms"
+  ],
+  "preprocessing": [
+    "standard",
+    "yeo_johnson"
+  ],
+  "k_grid": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    16,
+    20,
+    24
+  ],
+  "gmm_covariances": [
+    "full",
+    "diag"
+  ],
+  "pca_variance": 0.9,
+  "seed": 42,
+  "validation_group_fraction": 0.25,
+  "min_cluster_fraction": 0.02,
+  "silhouette_tolerance": 0.005,
+  "preprocessing_min_gain": 0.005,
+  "selection": "Silhouette de validacion en geometria comun, sin grupos de menos de 2%; dentro de 0.005 del maximo se prefiere menor K y despues menor BIC para GMM. Media de las cuatro configuraciones selecciona preparacion; exigir ganancia >0.005 frente a StandardScaler.",
+  "reference_geometry": "StandardScaler con mediana, ajustado solo con entrenamiento de cada fase; favorece por definicion geometria original",
+  "holdout": "2000 IDs fuera de la muestra anterior, sin artistas individuales compartidos con esa muestra y sin vectores acusticos exactos repetidos",
+  "holdout_seed": 20261119,
+  "human_evaluation": "Protocolo propuesto, no ejecutado",
+  "listening_example": "Consulta con popularidad >=70, candidata de entrenamiento <=30, mismo perfil; escoger la menor distancia original estandarizada y declarar el numero de consultas elegibles. Ejemplo ilustrativo, no prueba estadistica.",
+  "reproducibility_note": "Componentes de artistas con recorrido ordenado y representante mínimo canónico. Corrección de reproducibilidad documentada tras pruebas de implementación; no se modifica el criterio para favorecer popularidad."
+}

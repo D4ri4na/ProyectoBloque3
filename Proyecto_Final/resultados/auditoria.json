@@ -1,0 +1,38 @@
+{
+  "raw_rows": 114000,
+  "unique_rows": 89741,
+  "development": 8000,
+  "inner_fit": 6162,
+  "validation": 1838,
+  "holdout": 2000,
+  "eligible_holdout": 25888,
+  "previous_test_reused_for_selection": false,
+  "shared_artists_fit_validation": 0,
+  "shared_artists_previous_holdout": 0,
+  "shared_exact_audio_previous_holdout": 0,
+  "raw_missing": {
+    "danceability": 0,
+    "energy": 0,
+    "loudness": 0,
+    "speechiness": 0,
+    "acousticness": 0,
+    "instrumentalness": 0,
+    "liveness": 0,
+    "valence": 0,
+    "tempo": 0,
+    "duration_ms": 0
+  },
+  "training_missing": {
+    "danceability": 0,
+    "energy": 0,
+    "loudness": 0,
+    "speechiness": 0,
+    "acousticness": 0,
+    "instrumentalness": 0,
+    "liveness": 0,
+    "valence": 0,
+    "tempo": 21,
+    "duration_ms": 0
+  },
+  "dataset_sha256": "b202fa49909b2d5cef71a04b1d21243cfeb36414535f2ca9272aa646721177bd"
+}

@@ -1,0 +1,7 @@
+{
+  "preprocessing": "standard",
+  "pca_components": 7,
+  "pca_variance": 0.9080745534340746,
+  "pc1_pc2_variance": 0.44099197301585646,
+  "preprocess_seconds": 0.06419910000113305
+}

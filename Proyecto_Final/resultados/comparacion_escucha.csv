@@ -1,0 +1,11 @@
+variable,cancion_popular,referencia_menor_popularidad
+danceability,0.612,0.631
+energy,0.884,0.884
+loudness,-4.4,-4.629
+speechiness,0.0459,0.0324
+acousticness,0.00516,0.0063
+instrumentalness,0.0,5.18e-06
+liveness,0.0997,0.106
+valence,0.626,0.689
+tempo,119.991,124.983
+duration_ms,245625.0,219360.0

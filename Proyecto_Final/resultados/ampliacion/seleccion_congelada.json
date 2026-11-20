@@ -1,0 +1,89 @@
+{
+  "primary": "KMeans_original",
+  "selected": [
+    {
+      "model": "KMeans",
+      "space": "original",
+      "k": 4,
+      "covariance": "NA",
+      "converged": true,
+      "warnings": 0,
+      "min_train_fraction": 0.07497565725413827,
+      "min_val_fraction": 0.07671381936887922,
+      "val_sil_common": 0.15389315711336252,
+      "train_sil_native": 0.15511713400166782,
+      "bic": null,
+      "inertia": 40467.13266975204,
+      "fit_seconds": 0.606842900000629,
+      "eligible": true
+    },
+    {
+      "model": "KMeans",
+      "space": "pca",
+      "k": 4,
+      "covariance": "NA",
+      "converged": true,
+      "warnings": 0,
+      "min_train_fraction": 0.07432651736449204,
+      "min_val_fraction": 0.07725788900979326,
+      "val_sil_common": 0.15306807682095147,
+      "train_sil_native": 0.17680428774920817,
+      "bic": null,
+      "inertia": 34910.630445902854,
+      "fit_seconds": 0.5169467000014265,
+      "eligible": true
+    },
+    {
+      "model": "GMM",
+      "space": "original",
+      "k": 3,
+      "covariance": "diag",
+      "converged": true,
+      "warnings": 0,
+      "min_train_fraction": 0.16244725738396623,
+      "min_val_fraction": 0.1458106637649619,
+      "val_sil_common": 0.08180005672688428,
+      "train_sil_native": 0.09489139793009795,
+      "bic": 121174.68790958356,
+      "inertia": null,
+      "fit_seconds": 0.7220519000038621,
+      "eligible": true
+    },
+    {
+      "model": "GMM",
+      "space": "pca",
+      "k": 3,
+      "covariance": "diag",
+      "converged": true,
+      "warnings": 0,
+      "min_train_fraction": 0.17559234014930217,
+      "min_val_fraction": 0.1795429815016322,
+      "val_sil_common": 0.13928550876191206,
+      "train_sil_native": 0.16450973865218255,
+      "bic": 120722.61100157707,
+      "inertia": null,
+      "fit_seconds": 0.6253117999949609,
+      "eligible": true
+    }
+  ],
+  "leaders": {
+    "KMeans_original": 2,
+    "KMeans_pca": 0,
+    "GMM_original": 0,
+    "GMM_pca": 1
+  },
+  "contexts": {
+    "electronica": 2,
+    "rock_metal": 2,
+    "pop": 2,
+    "latina": 2,
+    "acustica_folk_country": 2
+  },
+  "baseline_key": "KMeans_pca",
+  "baseline_leader": 0,
+  "preprocessing": "standard",
+  "protocol_sha256": "c4cbfd0f4a61a0e1745a2e2a10100df30bb7387e601c7fed4c6f56263023f837",
+  "selection_uses_test": false,
+  "models_use_popularity": false,
+  "models_use_genre": false
+}

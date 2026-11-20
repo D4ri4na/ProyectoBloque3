@@ -1,0 +1,113 @@
+{
+  "objetivo": "¿Existen perfiles sonoros que concentren canciones de alta popularidad y qué características los distinguen?",
+  "hipotesis": "Dos grupos amplios pueden ocultar asociaciones en perfiles más detallados o dentro de contextos de género.",
+  "k_grid": [
+    3,
+    4,
+    5,
+    6,
+    8,
+    10
+  ],
+  "covariances": [
+    "full",
+    "diag"
+  ],
+  "min_cluster_fraction": 0.02,
+  "silhouette_tolerance": 0.005,
+  "preprocessing": "Conservar la preparación ya congelada del núcleo; no elegir por popularidad.",
+  "candidate_min_training": 200,
+  "high_popularity": 70,
+  "sensitivity": [
+    60,
+    80
+  ],
+  "new_evaluation_size": 6000,
+  "new_evaluation_minimum": 2000,
+  "new_evaluation_seed": 20261123,
+  "context_min_training": 400,
+  "context_min_profile_training": 80,
+  "context_min_test": 150,
+  "context_min_profile_test": 30,
+  "bootstrap": 3000,
+  "bootstrap_seed": 20261124,
+  "contexts": {
+    "electronica": [
+      "edm",
+      "electro",
+      "electronic",
+      "house",
+      "deep-house",
+      "progressive-house",
+      "tech-house",
+      "techno",
+      "detroit-techno",
+      "minimal-techno",
+      "trance",
+      "hardstyle",
+      "drum-and-bass",
+      "dubstep",
+      "idm",
+      "breakbeat",
+      "chicago-house"
+    ],
+    "rock_metal": [
+      "rock",
+      "alt-rock",
+      "alternative",
+      "indie-rock",
+      "hard-rock",
+      "heavy-metal",
+      "metal",
+      "metalcore",
+      "death-metal",
+      "black-metal",
+      "punk",
+      "punk-rock",
+      "grunge",
+      "emo",
+      "progressive-rock",
+      "psych-rock",
+      "rock-n-roll",
+      "rockabilly"
+    ],
+    "pop": [
+      "pop",
+      "dance",
+      "dance-pop",
+      "indie-pop",
+      "synth-pop",
+      "power-pop"
+    ],
+    "hiphop_rnb": [
+      "hip-hop",
+      "r-n-b",
+      "trip-hop"
+    ],
+    "latina": [
+      "latin",
+      "latino",
+      "reggaeton",
+      "salsa",
+      "samba",
+      "pagode",
+      "sertanejo",
+      "brazil"
+    ],
+    "acustica_folk_country": [
+      "acoustic",
+      "folk",
+      "singer-songwriter",
+      "songwriter",
+      "country",
+      "bluegrass",
+      "guitar",
+      "mpb"
+    ]
+  },
+  "genre_rule": "Recuperar todas las etiquetas brutas por track_id. Pertenencia múltiple permitida. Género solo se utiliza después del clustering, nunca para entrenar o elegir hiperparámetros.",
+  "selection": "Silhouette de validación en geometría común, tamaños mínimos; dentro de 0.005 del máximo preferir menor K y luego menor BIC. Modelo principal por mayor Silhouette de validación. Brazo experimental de granularidad: no se afirma que K>=3 mejore separación.",
+  "holdout": "Excluir todos los IDs, nombres de artistas y vectores acústicos exactos de las 14000 observaciones usadas antes. Muestreo uniforme sin filtrar popularidad. Si hay menos de 6000 elegibles, usar todas; exigir al menos 2000.",
+  "multiplicity": "IC95 para contraste principal global; contextos secundarios con intervalos bootstrap Bonferroni alfa=0.05/m, m contextos elegibles fijados en entrenamiento. Otras configuraciones y umbrales exploratorios.",
+  "caveat": "Ampliación motivada por resultados previos, no prerregistro externo. Validación de ajuste reutilizada. Nueva evaluación no selecciona modelos o umbrales. Las familias editoriales se solapan; no son confirmaciones independientes. Sin datos de año, idioma o estructura temporal del audio."
+}

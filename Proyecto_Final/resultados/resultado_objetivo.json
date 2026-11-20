@@ -1,0 +1,41 @@
+{
+  "primary_model": "KMeans_pca",
+  "primary_profile": 0,
+  "verdict": "No se confirma una mayor concentración en la nueva evaluación: el intervalo de la diferencia incluye cero.",
+  "profile_rate": 0.029431000654022238,
+  "baseline_rate": 0.029,
+  "lift": 1.0148620915180082,
+  "difference_pp": 0.18301513971220248,
+  "difference_ci_pp": [
+    -1.4557259798228628,
+    1.7643153553820536
+  ],
+  "n_new_evaluation": 2000,
+  "eligible_pool": 18120,
+  "bootstrap_repetitions": 2000,
+  "reproduction": [
+    {
+      "configuration": "KMeans_original",
+      "ari_train": 1.0,
+      "ari_previous_test": 1.0
+    },
+    {
+      "configuration": "GMM_original",
+      "ari_train": 1.0,
+      "ari_previous_test": 1.0
+    },
+    {
+      "configuration": "KMeans_pca",
+      "ari_train": 1.0,
+      "ari_previous_test": 1.0
+    },
+    {
+      "configuration": "GMM_pca",
+      "ari_train": 1.0,
+      "ari_previous_test": 1.0
+    }
+  ],
+  "status": "passed",
+  "exploratory_previous_evaluation": true,
+  "models_reselected_by_popularity": false
+}

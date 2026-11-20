@@ -1,0 +1,5 @@
+configuration,queries,recall_at_10,mean_pool,mean_returned,mean_original_distance
+GMM_original,200,0.589,878.09,10.0,1.3069890032177485
+GMM_pca,200,0.46,804.845,10.0,1.4014210404264267
+KMeans_original,200,0.9425,4981.365,10.0,1.1830410848436557
+KMeans_pca,200,0.5385,5012.77,10.0,1.3401053983994384

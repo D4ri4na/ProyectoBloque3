@@ -1,0 +1,20 @@
+{
+  "objetivo": "¿Existen perfiles sonoros que concentren canciones de alta popularidad y qué características los distinguen?",
+  "alta_popularidad": 70,
+  "sensibilidad": [
+    60,
+    80
+  ],
+  "modelo_principal": "Configuración ya congelada con mayor Silhouette de validación; nunca elegir por popularidad",
+  "perfil_candidato": "Grupo con mayor proporción de popularidad >=70 en entrenamiento; desempate por ID de grupo menor. Congelar antes de observar la nueva evaluación.",
+  "nueva_evaluacion": 2000,
+  "semilla_nueva_evaluacion": 20261121,
+  "exclusiones": "IDs, artistas individuales y vectores acústicos exactos de la muestra histórica de 10000 y de la evaluación adicional anterior de 2000",
+  "bootstrap": 2000,
+  "semilla_bootstrap": 20261122,
+  "intervalo": 0.95,
+  "efecto_principal": "Diferencia de proporciones de alta popularidad entre perfil candidato y resto, en nueva evaluación; bootstrap por componentes de artistas",
+  "regla_conclusion": "IC95 de diferencia completamente positivo: evidencia de concentración en esta muestra; intervalo que cruza cero: concentración no confirmada; completamente negativo: asociación invertida.",
+  "precaucion": "Revisión motivada por resultados previos; no es un prerregistro externo. La nueva evaluación proviene de la misma fuente histórica, no de un experimento causal ni de datos temporales nuevos. Las cuatro configuraciones son análisis relacionados; solo la principal define el contraste primario. Sensibilidad mantiene el perfil candidato elegido con umbral 70.",
+  "reproducibility_note": "Componentes de artistas con recorrido ordenado y representante mínimo canónico. Corrección de reproducibilidad documentada tras pruebas de implementación; no se modifica el criterio para favorecer popularidad."
+}

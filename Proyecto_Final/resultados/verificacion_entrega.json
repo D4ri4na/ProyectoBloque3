@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "code_cells": 33,
+  "questions": 12,
+  "verified_figures": 23,
+  "clustering_comparison_rows": 16,
+  "stability_pairs": 48,
+  "popularity_contrasts": 24,
+  "new_evaluation": 2000,
+  "primary_model_chosen_without_popularity": true,
+  "profile_chosen_on_training_only": true,
+  "no_artist_overlap": true,
+  "no_previous_id_overlap": true,
+  "no_exact_audio_vector_overlap": true,
+  "source_notebook_consistency": true,
+  "canonical_artist_split_reproduced": true,
+  "cross_process_bootstrap_reproduced": true
+}

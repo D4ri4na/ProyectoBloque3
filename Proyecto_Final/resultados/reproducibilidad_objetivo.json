@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "different_python_hash_seed": 999,
+  "same_primary_model": true,
+  "same_popularity_rates": true,
+  "same_bootstrap_intervals": true,
+  "canonical_artist_components": true
+}

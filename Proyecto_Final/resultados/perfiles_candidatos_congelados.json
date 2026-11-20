@@ -1,0 +1,14 @@
+{
+  "objective": "¿Existen perfiles sonoros que concentren canciones de alta popularidad y qué características los distinguen?",
+  "threshold": 70,
+  "primary_model": "KMeans_pca",
+  "leaders": {
+    "KMeans_original": 0,
+    "GMM_original": 1,
+    "KMeans_pca": 0,
+    "GMM_pca": 1
+  },
+  "models_reselected_by_popularity": false,
+  "profile_selection_uses_training_only": true,
+  "protocol_sha256": "08a6ae3f74810e1067ce26327eab9bc4526d564d3106e3853ef882e02ea04414"
+}
