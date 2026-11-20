@@ -1,98 +1,207 @@
-# Perfiles sonoros y popularidad musical
+# Perfiles Sonoros y Popularidad Musical en Spotify
 
-Proyecto Bloque 3: dos algoritmos de clustering antes y después de PCA.
+> **Proyecto Bloque 3 — Aprendizaje No Supervisado (ISW-222 Machine Learning)**  
+> Universidad Católica Boliviana · Semestre 6 · 2026
 
-**Pregunta:** ¿los grupos formados únicamente con características sonoras
-presentan diferencias de popularidad?
+---
 
-## Ejecución
+## Pregunta Central
 
-Desde esta carpeta, con Python 3.10 o superior:
+> *¿Los grupos formados únicamente con características acústicas presentan diferencias de popularidad? ¿Existen perfiles sonoros que concentren canciones de alta popularidad y qué características los distinguen?*
+
+---
+
+## Resultados Destacados
+
+| Configuración | Silhouette (espacio común, test) | Estabilidad (ARI) | Tiempo ajuste |
+|---|---|---|---|
+| **K-Means + PCA** ✅ Recomendada | **0.2477** | **99.4 %** | 0.14 s |
+| K-Means Original | 0.2460 | 99.5 % | 0.07 s |
+| GMM + PCA | 0.0243 | 55.2 % | 2.85 s |
+| GMM Original | −0.0119 | 55.7 % | 6.01 s |
+
+**Hallazgo de popularidad:** El perfil enérgico (Cluster 0) concentra el **4.64 %** de canciones ≥ 70 de popularidad frente al 2.98 % global → **Lift 1.55**, IC95 diferencia [+1.86, +3.83] pp.  
+El contraste es estadísticamente significativo pero con amplio solapamiento: el audio no garantiza el éxito comercial.
+
+**El Ritmo del Éxito (Cluster 0 — mayor popularidad):**
+- Tempo: **125 BPM** · Loudness: **−6.1 dB** · Bailabilidad: **0.61** · Energía: **0.76**
+- Carácter acústico: **0.08** (producción eléctrica/sintética) · Duración: **3 min 34 s**
+
+---
+
+## Estructura del Repositorio
+
+```
+ProyectoBloque3/
+│
+├── Proyecto_Musica.ipynb           # ⭐ Cuaderno principal: código + resultados ejecutados
+├── proyecto_musica.py              # Implementación completa del experimento
+│
+├── Explorador_Musical/
+│   ├── Explorador_Musical.html     # ⭐ App interactiva SONORA (abre en navegador, sin servidor)
+│   ├── Proyecto_Explorador_Musical.ipynb
+│   └── ...                         # Scripts y outputs del explorador
+│
+├── Proyecto_Final/
+│   ├── Proyecto_Mejorado.ipynb     # Ampliación metodológica con K=3-10 y contextos de género
+│   ├── mejorar_proyecto.py         # Script principal de la ampliación
+│   ├── analizar_contextos.py       # Análisis por contextos musicales (electrónica, rock, pop…)
+│   ├── analizar_popularidad.py     # Contraste de popularidad con nuevas 2000 canciones
+│   └── resultados/
+│       ├── informe.html            # Informe completo con las 12 respuestas de la rúbrica
+│       ├── informe.md              # Informe editable en Markdown
+│       └── ampliacion/             # Resultados de la ampliación (lift, contextos, figuras)
+│
+├── outputs/                        # Resultados del experimento principal
+│   ├── figures/                    # 21 gráficas generadas (distribuciones, perfiles, mapas 2D…)
+│   ├── informe.html                # Informe principal legible en navegador
+│   ├── comparativa.csv             # Tabla 2×2 obligatoria con métricas en espacio común
+│   ├── estabilidad.csv             # ARI por semillas y submuestras
+│   ├── busqueda_*.csv              # Curvas de búsqueda de hiperparámetros
+│   ├── perfiles_*.csv              # Medianas por cluster en unidades originales
+│   ├── popularidad_*.csv           # Distribución de popularidad post-clustering
+│   ├── asignaciones_*.csv          # Asignaciones de canciones (GMM incluye probabilidades)
+│   ├── validacion.json             # ✅ 8 comprobaciones de integridad (status: passed)
+│   └── versiones.json              # Versiones exactas: Python 3.12.5, sklearn 1.9.0…
+│
+├── data/raw/
+│   ├── spotify_tracks.csv          # Dataset fuente sin modificar (114.000 filas)
+│   └── manifest.json               # Procedencia, SHA-256 y huella de los datos
+│
+├── entregables/
+│   ├── Presentacion_Proyecto_Bloque3.pptx  # ⭐ Presentación de 16 diapositivas con gráficas
+│   ├── Proyecto_Musica_Bloque3.zip         # ZIP principal de entrega
+│   └── ...                                 # Otros ZIPs de versiones anteriores
+│
+├── descargar_dataset.py            # Descarga y verifica el CSV con SHA-256
+├── ejecutar_cuaderno.py            # Verifica todas las celdas sin servidor Jupyter
+├── crear_cuaderno.py               # Regenera el .ipynb desde proyecto_musica.py
+├── crear_graficas_diapos.py        # Genera las gráficas de la presentación
+├── generar_diapositivas.py         # Genera el PowerPoint de 16 diapositivas
+├── empaquetar_proyecto.py          # Crea el ZIP de entrega
+├── requirements.txt                # Dependencias del proyecto
+└── requirements-lock.txt           # Versiones exactas utilizadas en la ejecución verificada
+```
+
+---
+
+## Inicio Rápido
+
+### Requisitos
+- Python **3.10 o superior** (verificado en 3.12.5)
+- Las dependencias listadas en `requirements.txt`
+
+### Instalación y ejecución del experimento principal
 
 ```powershell
+# 1. Instalar dependencias
 python -m pip install -r requirements.txt
+
+# 2. Descargar el dataset (si no está en data/raw/)
 python descargar_dataset.py
+
+# 3. Ejecutar el experimento completo
 python proyecto_musica.py
+
+# (Alternativa) Abrir el cuaderno en Jupyter / VS Code
+# y ejecutar todas las celdas con Run All
 ```
 
-También puedes abrir `Proyecto_Musica.ipynb` en Jupyter o VS Code y ejecutar
-todas las celdas con el directorio de trabajo en esta carpeta. El notebook
-contiene el código completo y produce los mismos resultados que el script.
-No hace falta descargar audio ni disponer de una cuenta de Spotify.
-
-La entrega incluye las salidas reales del cuaderno. Se verificaron sus celdas
-Python secuencialmente en un mismo espacio de nombres, sin depender de un
-servidor Jupyter. Para repetir esa verificación: `python ejecutar_cuaderno.py`.
-Las versiones exactas utilizadas están en `requirements-lock.txt`; para
-reproducirlas puedes instalar ese archivo en lugar de `requirements.txt`.
-
-Si falla la conexión, descarga `dataset.csv` desde
-https://huggingface.co/datasets/maharshipandya/spotify-tracks-dataset/tree/main
-y ejecuta:
+### Verificar el cuaderno sin servidor Jupyter
 
 ```powershell
-python descargar_dataset.py --archivo "C:\ruta\dataset.csv"
-python proyecto_musica.py
+python ejecutar_cuaderno.py
+# → Cuaderno completo: 17 celdas Python, cero errores, ~249 s.
 ```
 
-Configuración predeterminada: 10.000 canciones únicas, semilla 42, 80/20,
-K=2…12, PCA con 90 % de varianza. Para otra muestra:
+### Regenerar la presentación PowerPoint
 
 ```powershell
-python proyecto_musica.py --muestra 10000 --kmax 12
+python crear_graficas_diapos.py   # genera gráficas especiales para las diapos
+python generar_diapositivas.py    # genera Presentacion_Proyecto_Bloque3.pptx
 ```
 
-## Archivos
+### Ejecutar la ampliación metodológica (Proyecto_Final)
 
-- `Proyecto_Musica.ipynb`: cuaderno ejecutable con código visible y resultados.
-- `proyecto_musica.py`: implementación completa.
-- `descargar_dataset.py`: descarga, validación de columnas y SHA-256.
-- `data/raw/spotify_tracks.csv`: datos fuente, sin modificar.
-- `data/raw/manifest.json`: procedencia y huella de los datos.
-- `outputs/informe.html`: informe para lectura en navegador o impresión.
-- `outputs/informe.md`: informe editable con las 12 preguntas de análisis.
-- `outputs/comparativa.csv`: métricas train/test y comparación en espacio común.
-- `outputs/busqueda_*.csv`: hiperparámetros, métricas, BIC/AIC y convergencia.
-- `outputs/estabilidad.csv`: ARI por pares, semillas y submuestras.
-- `outputs/perfiles_*.csv`: medianas en unidades originales.
-- `outputs/asignaciones_*.csv`: canciones y grupos; GMM incluye incertidumbre.
-- `outputs/popularidad_*.csv`: distribución de popularidad y prueba exploratoria.
-- `outputs/ejemplos_*.csv`: representantes seleccionados sin usar popularidad.
-- `outputs/figures/`: gráficos del análisis.
-- `outputs/versiones.json`: versiones realmente utilizadas.
-- `outputs/validacion.json`: comprobaciones al terminar una ejecución válida.
+```powershell
+cd Proyecto_Final
+python -m pip install -r requirements.txt
+python mejorar_proyecto.py        # clustering + objetivo de popularidad + contextos
+# Solo recalcular contextos con etapas previas ya disponibles:
+python analizar_contextos.py
+```
 
-## Decisiones importantes
+### Abrir el Explorador Interactivo SONORA
 
-Se excluye popularidad, artista, género e identificadores de clustering y PCA.
-Las canciones repetidas por ID se deduplican sin escoger por popularidad.
-El escalador, imputador y PCA solo aprenden del entrenamiento. Se conservan
-atípicos plausibles y se documentan. K-Means se selecciona por Silhouette y
-GMM por BIC, nunca por diferencias de popularidad. Se reajustan ambos tras PCA.
-La comparación entre espacios se realiza también con etiquetas PCA evaluadas
-en el espacio original escalado. El ARI compara particiones sobre las mismas
-canciones. Silhouette utiliza una muestra fija máxima de 2.000 canciones para
-limitar memoria. Los otros dos índices utilizan el conjunto completo.
+Haz doble clic en `Explorador_Musical/Explorador_Musical.html` en cualquier navegador moderno.  
+No necesita servidor, conexión a internet ni cuenta de Spotify.  
+Los enlaces de escucha en Spotify sí requieren conexión.
 
-Los p-valores de popularidad son exploratorios: las canciones pueden compartir
-artista y no son observaciones independientes. Popularidad no equivale a
-ventas, rentabilidad ni calidad. El dataset es histórico y no representa todo
-Spotify. Las versiones duplicadas con IDs distintos pueden permanecer. No se
-promete predecir éxitos ni demostrar causas de popularidad.
+---
 
-## Fuente, licencia y asistencia
+## Configuración del Experimento
 
-Pandya, M. (s. f.). *Spotify Tracks Dataset* [Conjunto de datos]. Hugging Face.
-https://huggingface.co/datasets/maharshipandya/spotify-tracks-dataset
+| Parámetro | Valor predeterminado |
+|---|---|
+| Canciones analizadas | **10.000 únicas** |
+| División | **80 % train / 20 % test** |
+| Semilla | **42** |
+| Rango de K explorado | **2 a 12** |
+| Varianza retenida PCA | **≥ 90 %** (resultado: 90.81 % con 7 componentes) |
+| Criterio K-Means | **Silhouette máximo** |
+| Criterio GMM | **BIC mínimo** |
 
-La ficha del repositorio declara BSD. Verificar el alcance de la licencia y
-los términos originales antes de redistribuir el dataset. No se distribuye audio.
+```powershell
+# Configuración personalizada
+python proyecto_musica.py --muestra 15000 --kmax 20
+```
 
-Pedregosa, F., et al. (2011). Scikit-learn: Machine learning in Python.
-*Journal of Machine Learning Research, 12*, 2825–2830.
-https://jmlr.org/papers/v12/pedregosa11a.html
+---
 
-Se utilizó ChatGPT/Codex para escribir y revisar código, estructurar el trabajo
-y generar explicaciones. Las cifras finales provienen de la ejecución real.
-Antes de entregar: completar autores, docente, fecha y revisar personalmente
-el significado de perfiles y conclusiones.
+## Decisiones Metodológicas Clave
+
+1. **Sin fuga de popularidad ni género:** ambos quedan 100 % fuera del entrenamiento y solo se usan como contraste posterior.
+2. **Deduplicación sin sesgo:** las canciones duplicadas por `track_id` se eliminan conservando la primera aparición en orden de archivo, sin seleccionar por popularidad.
+3. **Escalado y PCA ajustados solo en entrenamiento:** `StandardScaler`, imputador de medianas y PCA aprenden exclusivamente del conjunto de entrenamiento (80 %).
+4. **Hiperparámetros congelados antes de observar popularidad:** K y covarianza se seleccionan por métricas geométricas de validación; no se cambian después de ver las diferencias de popularidad.
+5. **Comparación justa:** las métricas en PCA se re-evalúan siempre en el espacio original escalado (`evaluation_space = reference_original`) para evitar comparar geometrías incompatibles.
+6. **Silhouette submuestreado:** se usa una muestra fija de máximo 2.000 observaciones con semilla fija para evitar costo cuadrático de memoria.
+
+---
+
+## Interpretación y Límites
+
+Los p-valores de popularidad son **exploratorios**: las canciones pueden compartir artista y no son observaciones independientes.  
+Popularidad ≥ 70 en el CSV histórico **no equivale** a ingresos, ventas, calidad ni éxito universal.  
+El dataset es de corte transversal; no se conoce la fecha exacta de medición.  
+El perfil sonoro influye, pero marketing, nombre del artista y viralidad en redes son factores determinantes que este análisis no captura.
+
+---
+
+## Versiones del Entorno Verificado
+
+| Librería | Versión |
+|---|---|
+| Python | 3.12.5 |
+| scikit-learn | 1.9.0 |
+| pandas | 3.0.5 |
+| numpy | 2.5.2 |
+| scipy | 1.18.1 |
+| matplotlib | 3.11.1 |
+| threadpoolctl | 3.6.0 |
+| python-pptx | 1.0.2 |
+
+---
+
+## Fuente de Datos, Licencia y Declaración de IA
+
+**Dataset:** Pandya, M. (s. f.). *Spotify Tracks Dataset* [Conjunto de datos]. Hugging Face.  
+https://huggingface.co/datasets/maharshipandya/spotify-tracks-dataset  
+La ficha del repositorio declara licencia BSD. Verificar el alcance y los términos originales antes de redistribuir. No se distribuye audio.
+
+**Referencia principal:**  
+Pedregosa, F., et al. (2011). Scikit-learn: Machine learning in Python. *Journal of Machine Learning Research, 12*, 2825–2830. https://jmlr.org/papers/v12/pedregosa11a.html
+
+**Uso de IA:** Se utilizó ChatGPT/Codex y Google Gemini (Antigravity) para escribir y revisar código, estructurar el trabajo, generar explicaciones y crear la presentación. Las cifras finales provienen de la ejecución real del código. Los autores deben revisar personalmente los resultados, interpretar los perfiles y declarar esta asistencia antes de la entrega final.
+
+> **Antes de entregar:** completar nombre de autores, docente y fecha en la carátula del cuaderno y del informe.
