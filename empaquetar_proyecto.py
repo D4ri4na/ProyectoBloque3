@@ -10,7 +10,8 @@ out.mkdir(exist_ok=True)
 dest = out / 'Proyecto_Musica_Bloque3.zip'
 names = ['README.md', 'requirements.txt', 'requirements-lock.txt', 'descargar_dataset.py',
          'proyecto_musica.py', 'crear_cuaderno.py', 'ejecutar_cuaderno.py',
-         'empaquetar_proyecto.py', 'Proyecto_Musica.ipynb']
+         'empaquetar_proyecto.py', 'Proyecto_Musica.ipynb', 'Informe_Tecnico_Bloque3.pdf',
+         'Diapositivas_Proyecto_Bloque3.pdf', 'Presentacion_Proyecto_Bloque3.pptx']
 files = [ROOT / name for name in names]
 files += sorted((ROOT / 'outputs').rglob('*'))
 files += sorted((ROOT / 'data/raw').glob('*'))
